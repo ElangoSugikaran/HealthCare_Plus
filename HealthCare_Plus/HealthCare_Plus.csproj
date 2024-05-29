@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C211C30-4243-4031-99E5-C72F1016DA1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HealthCare_Plus</RootNamespace>
+    <AssemblyName>HealthCare_Plus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentController.cs" />
+    <Compile Include="Diagnoses.cs" />
+    <Compile Include="DiagnosesController.cs" />
+    <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorController.cs" />
+    <Compile Include="HealthCare_plusDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthCare_plusDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LabResult.cs" />
+    <Compile Include="LabResultController.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginController.cs" />
+    <Compile Include="Login_cls.cs" />
+    <Compile Include="Manage_appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_appointment.Designer.cs">
+      <DependentUpon>Manage_appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_diagnoses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_diagnoses.Designer.cs">
+      <DependentUpon>Manage_diagnoses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_doctor.Designer.cs">
+      <DependentUpon>Manage_doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_lab_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_lab_result.Designer.cs">
+      <DependentUpon>Manage_lab_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_medical_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_medical_history.Designer.cs">
+      <DependentUpon>Manage_medical_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_medication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_medication.Designer.cs">
+      <DependentUpon>Manage_medication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_patient.Designer.cs">
+      <DependentUpon>Manage_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_payment.Designer.cs">
+      <DependentUpon>Manage_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_report.Designer.cs">
+      <DependentUpon>Manage_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_resource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_resource.Designer.cs">
+      <DependentUpon>Manage_resource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_room.Designer.cs">
+      <DependentUpon>Manage_room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_theater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_theater.Designer.cs">
+      <DependentUpon>Manage_theater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medical_History.cs" />
+    <Compile Include="Medical_HistoryController.cs" />
+    <Compile Include="Medication.cs" />
+    <Compile Include="MedicationController.cs" />
+    <Compile Include="Patient.cs" />
+    <Compile Include="PatientController.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manage_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_staff.Designer.cs">
+      <DependentUpon>Manage_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist_Dashboard.Designer.cs">
+      <DependentUpon>Receptionist_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourceController.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomController.cs" />
+    <Compile Include="Staff.cs" />
+    <Compile Include="StaffController.cs" />
+    <Compile Include="Theater.cs" />
+    <Compile Include="TheaterController.cs" />
+    <EmbeddedResource Include="Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_appointment.resx">
+      <DependentUpon>Manage_appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_diagnoses.resx">
+      <DependentUpon>Manage_diagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_doctor.resx">
+      <DependentUpon>Manage_doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_lab_result.resx">
+      <DependentUpon>Manage_lab_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_medical_history.resx">
+      <DependentUpon>Manage_medical_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_medication.resx">
+      <DependentUpon>Manage_medication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_patient.resx">
+      <DependentUpon>Manage_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_payment.resx">
+      <DependentUpon>Manage_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_report.resx">
+      <DependentUpon>Manage_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_resource.resx">
+      <DependentUpon>Manage_resource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_room.resx">
+      <DependentUpon>Manage_room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_theater.resx">
+      <DependentUpon>Manage_theater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Manage_staff.resx">
+      <DependentUpon>Manage_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist_Dashboard.resx">
+      <DependentUpon>Receptionist_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="HealthCare_plusDataSet.xsc">
+      <DependentUpon>HealthCare_plusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HealthCare_plusDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HealthCare_plusDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HealthCare_plusDataSet.xss">
+      <DependentUpon>HealthCare_plusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login pg bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
